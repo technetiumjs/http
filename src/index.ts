@@ -1,1 +1,1 @@
-console.log("Hello world");
+export { HttpController } from "./http.controller";
