@@ -1,0 +1,50 @@
+{
+  "name": "@yellow-snow/http",
+  "version": "0.0.0",
+  "private": false,
+  "description": "",
+  "main": "./lib/index",
+  "types": "./lib/index",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha \"src/**/*.spec.ts\" --recursive --require node_modules/ts-node/register.js",
+    "test:watch": "npm run test -- --watch-extensions ts,spec.ts --watch",
+    "coverage": "node node_modules/nyc/bin/nyc.js --extension .ts --reporter lcov --reporter text npm run test",
+    "build": "npm run clean && node node_modules/typescript/bin/tsc --p tsconfig.json",
+    "build:watch": "node_modules/typescript/bin/tsc --p tsconfig.json --watch",
+    "clean": "rm -rf lib",
+    "docs": "node node_modules/typedoc/bin/typedoc --out docs/ src/ && echo '*\n!.gitignore' > docs/.gitignore",
+    "lint": "node node_modules/tslint/bin/tslint -c tslint.json -e \"**/*.spec.ts\"  src/**/*.ts"
+  },
+  "author": "John A. Fedoruk <johnny@johnfedoruk.ca> (http://johnfedoruk.ca)",
+  "license": "mit-licence",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@yellow-snow/core": "0.0.3",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "multer": "^1.3.0",
+    "rxjs": "^5.4.3",
+    "tsnode-di": "0.0.3"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.8",
+    "@types/chai": "^4.0.4",
+    "@types/cors": "^2.8.3",
+    "@types/express": "^4.11.1",
+    "@types/mocha": "^2.2.43",
+    "@types/multer": "^1.3.6",
+    "@types/node": "^8.0.34",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1",
+    "npm-run-parallel": "^0.6.0",
+    "nyc": "^11.2.1",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.9.1",
+    "typedoc": "^0.9.0",
+    "typescript": "^2.7.2"
+  }
+}

@@ -1,0 +1,33 @@
+#.travis.yml
+
+language: node_js
+node_js:
+  - "8.9"
+
+branches:
+  only:
+    - master
+    - develop
+
+before_script:
+  - npm install
+
+script:
+  - npm run lint
+  - npm run test
+  - npm run build
+
+before_deploy:
+
+deploy:
+  provider: npm
+  email: johnny@johnfedoruk.ca
+  api_key: $NPM_TOKEN
+  skip_cleanup: true  
+  on:
+    branch: master
+
+notifications:
+  email:
+    on_failure: change
+    on_success: change
