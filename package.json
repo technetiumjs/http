@@ -1,6 +1,6 @@
 {
   "name": "@yellow-snow/http",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": false,
   "description": "",
   "main": "./lib/index",
@@ -44,7 +44,7 @@
     "nyc": "^11.2.1",
     "ts-node": "^3.3.0",
     "tslint": "^5.9.1",
-    "typedoc": "^0.9.0",
+    "typedoc": "^0.11.1",
     "typescript": "^2.7.2"
   }
 }
