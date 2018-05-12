@@ -1,6 +1,7 @@
 {
   "name": "@yellow-snow/http",
   "version": "0.0.0",
+  "private": false,
   "description": "",
   "main": "./lib/index",
   "types": "./lib/index",
@@ -16,6 +17,9 @@
   },
   "author": "John A. Fedoruk <johnny@johnfedoruk.ca> (http://johnfedoruk.ca)",
   "license": "mit-licence",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@yellow-snow/core": "0.0.2",
     "body-parser": "^1.18.2",
