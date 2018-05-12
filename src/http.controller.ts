@@ -2,7 +2,7 @@ import { Controller } from "@yellow-snow/core";
 import * as express from "express";
 import { NextFunction } from "express-serve-static-core";
 
-export class HttpController implements Controller {
+export abstract class HttpController implements Controller {
     protected req: express.Request;
     protected res: express.Response;
     protected next: NextFunction;

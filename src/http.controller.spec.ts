@@ -7,10 +7,14 @@ const expect = chai.expect;
 let ctrl: Controller;
 const ne: any = undefined;
 
+class TestHttpController extends HttpController {
+
+}
+
 describe("Controller", () => {
     describe("TestController", () => {
         beforeEach(() => {
-            ctrl = new HttpController(ne, ne, ne);
+            ctrl = new TestHttpController(ne, ne, ne);
         });
         it("should instantiate", () => {
             // tslint:disable-next-line:no-unused-expression
