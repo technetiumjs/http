@@ -15,7 +15,7 @@ export function Secure(constructor: any, roles?: string | string[]): any {
             const auth = new constructor();
             const status: number | boolean = await auth.canActivate(req, roles);
             if (status === 200 || status === true) {
-                method();
+                return method.apply(this);
             } else {
                 res.status(status === false ? 401 : status);
                 res.send();

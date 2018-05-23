@@ -165,4 +165,25 @@ describe("Secure", () => {
         const ctrl = new TestHttpController(ne, ne, ne);
         ctrl.testMethod();
     });
+    it("should preserve context of 'this' on controller", (done) => {
+        // tslint:disable-next-line:max-classes-per-file
+        class Authenticate implements Auth {
+            public async canActivate(_REQ: any, roles: any): Promise<number> {
+                expect(roles).to.be.instanceof(Array);
+                return 200;
+            }
+        }
+        // tslint:disable-next-line:max-classes-per-file
+        class TestHttpController extends HttpController {
+            @Secure(Authenticate, "hello")
+            public async testMethod() {
+                this.done();
+            }
+            public done() {
+                done();
+            }
+        }
+        const ctrl = new TestHttpController(ne, ne, ne);
+        ctrl.testMethod();
+    });
 });
