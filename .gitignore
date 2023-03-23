@@ -1,0 +1,7 @@
+/node_modules/
+/lib/
+/.nyc_output/
+/docs/
+/coverage/
+/src/config.ts
+/.npmrc
