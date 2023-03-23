@@ -1,4 +1,4 @@
-import { Controller } from "@yellow-snow/core";
+import { Controller } from "@techjs/core";
 import * as chai from "chai";
 import { HttpController } from "./http.controller";
 

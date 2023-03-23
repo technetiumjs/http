@@ -1,5 +1,4 @@
 import { HttpController } from "../";
-// import { Auth } from "./auth";
 
 export function Secure(constructor: any, roles?: string | string[]): any {
     return (_TARGET: HttpController, _PROPERTY_KEY: string, descriptor: PropertyDescriptor) => {

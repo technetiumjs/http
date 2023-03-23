@@ -1,4 +1,4 @@
-import { Route, Router } from "@yellow-snow/core";
+import { Route, Router } from "@techjs/core";
 import * as express from "express";
 import { NextFunction } from "express-serve-static-core";
 import { HttpRoute } from "./http.route";
