@@ -1,4 +1,4 @@
-import { Route } from "@yellow-snow/core";
+import { Route } from "@techjs/core";
 import * as express from "express";
 import { HttpController } from ".";
 import { HttpVerb } from "./http-verb";

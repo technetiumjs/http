@@ -1,4 +1,4 @@
-import { Controller } from "@yellow-snow/core";
+import { Controller } from "@techjs/core";
 import * as express from "express";
 import { NextFunction } from "express-serve-static-core";
 
